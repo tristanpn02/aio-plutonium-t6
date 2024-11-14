@@ -1,6 +1,6 @@
 FROM ubuntu:jammy
 
-LABEL author="João Carlos Palma"
+LABEL author="Tristan Andersen"
 
 
 ################################################################################
@@ -64,6 +64,13 @@ RUN apt-get install -y \
 # Update the system
 RUN apt-get upgrade -y
 
+# Add Microsoft Package Signing Key and Repository
+# And install ASP.NEY Core Runtime Version 8.0
+RUN wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    apt-get update && \
+    apt-get install -y aspnetcore-runtime-8.0 && \
+    rm packages-microsoft-prod.deb
 
 ################################################################################
 #                               Installing WINE                                #
