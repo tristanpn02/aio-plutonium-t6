@@ -1,4 +1,4 @@
-# [AIO-Plutonium-T6](https://github.com/thejcpalma/aio-plutonium-t6) - All-in-One Plutonium Server
+# AIO-Plutonium-T6 - All-in-One Plutonium Server
 
 This repository contains files and instructions for building and running a [Plutonium](https://plutonium.pw) server with an integrated [IW4Admin](https://github.com/RaidMax/IW4M-Admin) panel within Docker.
 
